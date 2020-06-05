@@ -1,0 +1,88 @@
+
+<div class="container">
+  <div id="stepper1" class="bs-stepper">
+    <div class="bs-stepper-header">
+      <div class="step" data-target="#test-l-1">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">1</span>
+          <span class="bs-stepper-label">Registro De Productores</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-2">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">2</span>
+          <span class="bs-stepper-label">Registro De Predios</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-3">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">3</span>
+          <span class="bs-stepper-label">Datos Familiares</span>
+        </button>
+      </div>
+    </div>
+    <div class="bs-stepper-content">
+      <form (ngSubmit)="onSubmit()">
+        <div id="test-l-1" class="content">
+          
+          <div class="form-group">
+            <label id="NumerodeCedulaLabel">Número de Cedula</label>
+            <input type="text" id="cedulaProductores" name="cedula"class="form-control"  placeholder="Digita tu cedula" />
+          </div>
+          <div class="form-group">
+            <label id="NombreProductoresLabel">Nombre Completo</label>
+            <input type="text" id="NombreProductores" name="nombre" class="form-control"  placeholder="Nombre Completo" />
+          </div>
+          <div class="form-group">
+            <label id="CodigoProductoresLabel">Código Productor</label>
+            <input type="text" id="CodigoProductores" name="codigoProductor"class="form-control"  placeholder="Digite codigo" />
+          </div>
+          <div class="form-group">
+            <label id="NumeroLabel">Número Telefónico</label>
+            <input type="text" id="Numero" name="numero" class="form-control"  placeholder="Digite numero telefonico" />
+          </div>
+          <div class="form-group">
+            <label id="AfiliacionLabel">Afiliciacion a Salud</label>
+            <input type="text" id="Afiliacion" name="Afiliacion" class="form-control"  placeholder="" />
+          </div>
+          <div class="form-group">
+            <label id="ActividadLabel">Actividad Principal de Ingreso</label>
+            <input type="text" id="Actividad" name="Actividad" class="form-control"  placeholder="Campo requerido" />
+          </div>
+          <button id="btnnext" (click)="next()" class="btn btn-primary">Next</button>
+        
+        </div>
+        <div id="test-l-2" class="content">
+          <div class="form-group">
+            <label >Codigo del predio</label>
+            <input type="text"  class="form-control" id="CodigoPredio" placeholder="Digite codigo" />
+          </div>
+          <div class="form-group">
+            <label id="NombrePredioLabel" >Nombre del predio</label>
+            <input type="text"  class="form-control" id="NombrePredio" placeholder="Digite Nombre" />
+          </div>
+          <div class="form-group">
+            <label id="CodigoICALabel">Codigo de ICA</label>
+            <input type="text"  class="form-control" id="CodigoICA" placeholder="Digite codigo ICA" />
+          </div>
+          <div class="form-group">
+            <label id="MunicipioLabel">Municipio</label>
+            <input type="text"  class="form-control" id="Municipio" placeholder="Municipio" />
+          </div>
+          <div class="form-group">
+            <label id="VeredaLabel">Vereda</label>
+            <input type="text"  class="form-control" id="Vereda" placeholder="Vereda" />
+          </div>
+          <button id="btnnext-2" (click)="next()" class="btn btn-primary">Next</button>
+        </div>
+        <div id="test-l-3" class="content text-center">
+          <h2>Datos Familiares</h2>
+          
+          <button id="btnsubmit" type="submit" (click)="add()"class="btn btn-primary mt-5">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
