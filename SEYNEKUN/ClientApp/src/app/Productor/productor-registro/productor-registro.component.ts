@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Stepper from 'bs-stepper';
 import { Productor } from '../models/productor';
 import { ProductorService } from 'src/app/services/productor.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-productor-registro',
@@ -14,9 +15,10 @@ export class ProductorRegistroComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   private stepper: Stepper;
-  
+  formGroup: FormGroup;
 productor: Productor;
-  constructor(private productorService:ProductorService,private _formBuilder: FormBuilder) { }
+  constructor(private productorService:ProductorService,private _formBuilder: FormBuilder,
+    private modalService: NgbModal) { }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -29,19 +31,63 @@ productor: Productor;
       linear: false,
       animation: true
     })
+    this.buildForm();
   }
+  private buildForm() {
+    this.productor = new Productor();
+
+this.productor.cedula = '';
+
+this.productor.nombre = '';
+
+this.productor.codigoProductor = '';
+
+this.productor.numeroTelefonico = '';
+
+this.productor.afiliacion = '' ;
+
+this.productor.actividad = '' ;
+
+
+
+    this.formGroup = this._formBuilder.group({
+      cedula: [this.productor.cedula, Validators.required],
+
+      nombre: [this.productor.nombre, Validators.required],
+      
+      codigoProductor: [this.productor.codigoProductor, Validators.required],
+      
+      numeroTelefonico: [this.productor.numeroTelefonico, [Validators.required, Validators.min(1)]],
+      afiliacion : [this.productor.afiliacion, Validators.required],
+      actividad: [this.productor.actividad, Validators.required],
+
+
+     });
+  }
+  get control() {
+
+    return this.formGroup.controls;
+    
+    }
   next() {
     this.stepper.next();
   }
   onSubmit() {
-    return false;
+    if (this.formGroup.invalid) {
+
+      return;
+      
+      }
+      
+      this.add();
   }
   add(){
+    this.productor = this.formGroup.value;
     this.productorService.post(this.productor).subscribe(p => {
 
       if (p != null) {
       
-      alert('Persona creada!');
+      alert('Productor a sido guardado');
       
       this.productor= p;
       

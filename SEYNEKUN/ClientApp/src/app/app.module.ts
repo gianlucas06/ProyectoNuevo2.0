@@ -19,9 +19,11 @@ import { ProductorConsultaComponent } from './Productor/productor-consulta/produ
 import { ProductorRegistroComponent } from './Productor/productor-registro/productor-registro.component';
 import { ProductorService } from './services/productor.service';
 import { JwtInterceptorService } from "./services/jwt-interceptor.service";
-import { AuthGuardService } from "./services/auth-guard.service";
 import { PanelaRegistroComponent } from './Produccion/panela-registro/panela-registro.component';
 import { PanelaConsultaComponent } from './Produccion/panela-consulta/panela-consulta.component';
+import { AuthGuardService } from "./services/auth-guard.service";
+
+
 
 @NgModule({
   declarations: [

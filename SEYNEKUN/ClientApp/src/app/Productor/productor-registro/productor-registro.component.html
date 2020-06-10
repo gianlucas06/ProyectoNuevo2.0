@@ -1,3 +1,5 @@
+<body>
+  
 
 <div class="container">
   <div id="stepper1" class="bs-stepper">
@@ -23,38 +25,72 @@
         </button>
       </div>
     </div>
+    
     <div class="bs-stepper-content">
-      <form (ngSubmit)="onSubmit()">
-        <div id="test-l-1" class="content">
-          
-          <div class="form-group">
-            <label id="NumerodeCedulaLabel">Número de Cedula</label>
-            <input type="text" id="cedulaProductores" name="cedula"class="form-control"  placeholder="Digita tu cedula" />
-          </div>
-          <div class="form-group">
-            <label id="NombreProductoresLabel">Nombre Completo</label>
-            <input type="text" id="NombreProductores" name="nombre" class="form-control"  placeholder="Nombre Completo" />
-          </div>
-          <div class="form-group">
-            <label id="CodigoProductoresLabel">Código Productor</label>
-            <input type="text" id="CodigoProductores" name="codigoProductor"class="form-control"  placeholder="Digite codigo" />
-          </div>
-          <div class="form-group">
-            <label id="NumeroLabel">Número Telefónico</label>
-            <input type="text" id="Numero" name="numero" class="form-control"  placeholder="Digite numero telefonico" />
-          </div>
-          <div class="form-group">
-            <label id="AfiliacionLabel">Afiliciacion a Salud</label>
-            <input type="text" id="Afiliacion" name="Afiliacion" class="form-control"  placeholder="" />
-          </div>
-          <div class="form-group">
-            <label id="ActividadLabel">Actividad Principal de Ingreso</label>
-            <input type="text" id="Actividad" name="Actividad" class="form-control"  placeholder="Campo requerido" />
-          </div>
-          <button id="btnnext" (click)="next()" class="btn btn-primary">Next</button>
+      
+          <form (ngSubmit)="onSubmit()" >
+        <form [formGroup]="formGroup " class=" ">
         
+             <div id="test-l-1" class="content">
+          
+            <div class="form-group  ">
+              <label for="Cedula" class="form-label">Cedula</label>
+              
+              <input type="text" name="cedula"  formControlName="cedula"class="form-control"
+              [ngClass]="{ 'is-invalid':  control.cedula.errors }"/>
+              <div *ngIf=" control.cedula.errors" class="invalid-feedback">
+                  <div class="mensaje-error" *ngIf="control.cedula.errors.required">*La Identificación es requerida*</div>
+              </div>
+            </div>
+            <div class="form-group ">
+            <label for="Nombre" class="form-label">Nombre</label>
+            <input type="text" name="nombre" formControlName="nombre" class="form-control"
+            [ngClass]="{ 'is-invalid':  control.nombre.errors }"/>
+            <div *ngIf=" control.nombre.errors" class="invalid-feedback">
+                <div class="mensaje-error" *ngIf="control.nombre.errors.required">*El nombre es requerido*</div>
+            </div>
+           </div>
+            <div class="form-group ">
+              <label for="CodigoProductor" class="form-label">Codigo Productor</label>
+              
+              <input type="text" name="codigoProductor " formControlName="codigoProductor" class="form-control"
+              [ngClass]="{ 'is-invalid':  control.codigoProductor.errors }"/>
+              <div *ngIf=" control.codigoProductor.errors" class="invalid-feedback">
+                  <div class="mensaje-error" *ngIf="control.codigoProductor.errors.required">*Campo requerido*</div>
+              </div>
+            </div>
+            <div class="form-group   ">
+              <label for="numeroTelefonico" class="form-label">Numero telefonico</label>
+              
+              <input type="text" name="numeroTelefonico" formControlName="numeroTelefonico" class="form-control"
+              [ngClass]="{ 'is-invalid':  control.numeroTelefonico.errors }"/>
+              <div *ngIf=" control.numeroTelefonico.errors" class="invalid-feedback">
+                  <div class="mensaje-error" *ngIf="control.numeroTelefonico.errors.required">*Campo requerido*</div>
+              </div>
+            </div>
+            <div class="form-group   ">
+              <label for="afiliacion" class="form-label">Afiliacion</label>
+              
+              <input type="text" name="afiliacion" formControlName="afiliacion" class="form-control"
+              [ngClass]="{ 'is-invalid':  control.afiliacion.errors }"/>
+              <div *ngIf=" control.afiliacion.errors" class="invalid-feedback">
+                  <div class="mensaje-error" *ngIf="control.afiliacion.errors.required">*Campo requerido*</div>
+              </div>
+            </div>
+            <div class="form-group   ">
+              <label for="actividad" class="actividad">Afiliacion</label>
+              
+              <input type="text" name="actividad" formControlName="actividad" class="form-control"
+              [ngClass]="{ 'is-invalid':  control.actividad.errors }"/>
+              <div *ngIf=" control.actividad.errors" class="invalid-feedback">
+                  <div class="mensaje-error" *ngIf="control.actividad.errors.required">*Campo requerido*</div>
+              </div>
+            
+         
+          <button id="btnnext" (click)="next()" class="btn btn-primary">Next</button>
         </div>
-        <div id="test-l-2" class="content">
+          </div>
+           <div id="test-l-2" class="content">
           <div class="form-group">
             <label >Codigo del predio</label>
             <input type="text"  class="form-control" id="CodigoPredio" placeholder="Digite codigo" />
@@ -82,7 +118,11 @@
           
           <button id="btnsubmit" type="submit" (click)="add()"class="btn btn-primary mt-5">Submit</button>
         </div>
+      
       </form>
-    </div>
+      </form>
+    
   </div>
-</div>
+  </div>
+    </div>
+</body>

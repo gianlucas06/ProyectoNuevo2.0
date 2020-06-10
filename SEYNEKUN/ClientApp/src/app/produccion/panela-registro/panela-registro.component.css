@@ -1,4 +1,5 @@
 body{
+   background: url(src\assets\ImagenesCarousel\seynekun-sierra-nevada.jpg) no-repeat center top;
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
@@ -10,7 +11,7 @@ body{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-attachment: fixed;
-   
+
 }
 .form-tittle{
     

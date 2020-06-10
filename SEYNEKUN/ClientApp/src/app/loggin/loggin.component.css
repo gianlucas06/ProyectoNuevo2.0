@@ -1,4 +1,4 @@
-/*
+
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
   .login-box {
     width: 320px;
     height: 420px;
-    background:rgba(0, 0, 0, .7);
+    background:rgba(53, 27, 5, 0.7);
     color: #fff;
     top: 50%;
     left: 50%;
@@ -30,7 +30,7 @@ body {
     left: calc(45% - 50px);
   }
   
-  .login-box h1 {
+  .login-box h2 {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
@@ -49,29 +49,31 @@ body {
     margin-bottom: 20px;
   }
   
-  .login-box input[type="text"], .login-box input[type="password"] {
+  .login-box input[type="userName"], .login-box input[type="password"] {
     border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
+    background:rgba(185, 117, 62, 0.7);
+    border-bottom: 2px solid #fff;
     outline: none;
     height: 40px;
-    color: #fff;
+    color: rgb(3, 2, 2);
     font-size: 16px;
   }
   
-  .login-box input[type="submit"] {
+   #botonInicio {
     border: none;
     outline: none;
     height: 40px;
-    background: rgba(29, 99, 15, 0.7);
+    background: rgba(7, 77, 13, 0.7);
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
+    position: relative;
+    left: calc(45% - 30px);
   }
   
-  .login-box input[type="submit"]:hover {
+   #botonInicio:hover {
     cursor: pointer;
-    background: #ffc107;
+    background: #ff9307;
     color: #000;
   }
   
@@ -85,4 +87,3 @@ body {
   .login-box a:hover {
     color: #fff;
   }
-*/

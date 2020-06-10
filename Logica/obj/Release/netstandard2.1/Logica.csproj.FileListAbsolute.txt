@@ -12,3 +12,17 @@ C:\Users\leandro\Desktop\ProyectoNuevo-master\Logica\obj\Release\netstandard2.1\
 C:\Users\leandro\Desktop\ProyectoNuevo-master\Logica\obj\Release\netstandard2.1\Logica.csproj.CopyComplete
 C:\Users\leandro\Desktop\ProyectoNuevo-master\Logica\obj\Release\netstandard2.1\Logica.dll
 C:\Users\leandro\Desktop\ProyectoNuevo-master\Logica\obj\Release\netstandard2.1\Logica.pdb
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\bin\Release\netstandard2.1\Logica.deps.json
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\bin\Release\netstandard2.1\Logica.dll
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\bin\Release\netstandard2.1\Logica.pdb
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\bin\Release\netstandard2.1\Datos.dll
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\bin\Release\netstandard2.1\Entity.dll
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\bin\Release\netstandard2.1\Entity.pdb
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\bin\Release\netstandard2.1\Datos.pdb
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\obj\Release\netstandard2.1\Logica.csprojAssemblyReference.cache
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\obj\Release\netstandard2.1\Logica.csproj.CoreCompileInputs.cache
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\obj\Release\netstandard2.1\Logica.AssemblyInfoInputs.cache
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\obj\Release\netstandard2.1\Logica.AssemblyInfo.cs
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\obj\Release\netstandard2.1\Logica.csproj.CopyComplete
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\obj\Release\netstandard2.1\Logica.dll
+C:\Users\Gian Lucas\Desktop\webProyecto-master\Logica\obj\Release\netstandard2.1\Logica.pdb

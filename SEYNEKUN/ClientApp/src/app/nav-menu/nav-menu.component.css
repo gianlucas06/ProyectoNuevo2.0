@@ -115,3 +115,26 @@ html {
    overflow: hidden;
 
 }
+
+.navbar-nav .nav-item nav-link{
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: rgb(38, 165, 70);
+  padding: 10px 20px;
+  text-align: center;
+  
+}
+
+.nav-item .nav-item nav-link{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+.nav-item .nav-item nav-link:hover:not(.active) {
+  background-color: rgb(74, 252, 4);
+  color:black;
+  
+}
